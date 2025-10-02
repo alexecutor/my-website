@@ -1,0 +1,163 @@
+/* Body and semi-transparent background */
+body {
+  position: relative;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+  overflow: hidden;
+  background-color: #95ffff; /* fallback */
+}
+/* Top banner across all pages */
+.banner {
+    position: relative;
+  width: 100%;
+  height: 150px;           /* adjust height as desired */
+  overflow: hidden;
+  margin-bottom: 20px;     /* space below banner */
+}
+
+.banner img {
+  width: 100%;             /* stretch full width */
+  height: 100%;            /* fill banner height */
+  object-fit: cover;
+  display: block;       /* crop/scale nicely */
+}
+
+/* Semi-transparent background across entire site */
+body {
+  position: relative;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #95ffff; /* fallback color */
+}
+
+body::before {
+  content: "";
+  position: fixed;             /* fixed so it covers full page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('mycat.jpg');  /* your cat background */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;                /* semi-transparent */
+  z-index: -1;                  /* behind all content */
+}
+/* Top banner across all pages */
+.banner {
+  width: 100%;
+  height: 150px;           /* adjust height as desired */
+  overflow: hidden;
+  margin-bottom: 20px;     /* space below banner */
+}
+
+.banner img {
+  width: 100%;             /* stretch full width */
+  height: 100%;            /* fill banner height */
+  object-fit: cover;       /* crop/scale nicely */
+}
+
+/* Semi-transparent background across entire site */
+body {
+  position: relative;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #95ffff; /* fallback color */
+}
+
+body::before {
+  content: "";
+  position: fixed;             /* fixed so it covers full page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('mycat.jpg');  /* your cat background */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;                /* semi-transparent */
+  z-index: -1;                  /* behind all content */
+}
+
+
+body::before {
+  content: "";
+  position: fixed;          /* change from absolute to fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('mycat.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+
+/* Headings */
+h1 {
+  color: #2c3e50;
+}
+
+/* Buttons */
+button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+/* Gallery Images */
+img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin: 20px;
+  cursor: crosshair;
+}
+
+/* Colored borders */
+.dog { border: 3px solid #3498db; }
+.cat { border: 3px solid #e74c3c; }
+
+/* Lightbox overlay */
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#lightbox img {
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  cursor: pointer;
+  object-fit: unset; /* disables cropping */
+}

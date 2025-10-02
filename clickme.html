@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Click Me Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <body>
+  <!-- Top Banner -->
+  <div class="banner">
+    <img src="mycat.jpg" alt="Banner Image">
+  </div>
+
+  <!-- Page content -->
+  <h1>Gallery Page</h1>
+  <!-- rest of your content -->
+</body>
+
+
+  <h1>My Picture Gallery</h1>
+
+  <!-- Gallery Images -->
+  <img src="mydog.jpg" alt="My Dog" class="clickable dog">
+  <img src="mycat.jpg" alt="My Cat" class="clickable cat">
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="">
+  </div>
+
+  <!-- Link to go back -->
+  <p><a href="index.html">Go Back</a></p>
+
+  <!-- Lightbox JS -->
+  <script>
+    const images = document.querySelectorAll('.clickable');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src; // uses original image
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+    }
+  </script>
+</body>
+</html>
